@@ -100,7 +100,7 @@ spread instead of a card wall.
 ## Browser support
 
 Modern evergreen (Chrome, Edge, Safari 15+, Firefox). Fully responsive
-320 px → 1920 px.
+320 px → 1920 px..
 
 ---
 
