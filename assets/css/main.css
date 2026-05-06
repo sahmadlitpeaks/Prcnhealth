@@ -1,6 +1,6 @@
 /* =============================================================
    Precision Health Group — main.css
-   Editorial / parent-brand layer on top of Tailwind.
+   Quieter visual layer. Borders carry the structure; clay is rare.
    ============================================================= */
 
 :root {
@@ -14,46 +14,27 @@
 
 html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 
-/* Subtle paper texture for the page — gives the editorial feel */
-body {
-  background-image:
-    radial-gradient(1200px 600px at 80% -10%, rgba(194,107,74,.06), transparent 60%),
-    radial-gradient(900px  500px at -10% 110%, rgba(14,59,51,.06), transparent 60%);
-  background-attachment: fixed;
-}
-
-/* Display headlines — let DM Serif Display breathe */
-.display-xl { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; line-height: 0.95; letter-spacing: -0.025em; }
-
-/* Marquee */
-.animate-marquee:hover { animation-play-state: paused; }
+body { background: var(--ivory); }
 
 /* Hide native arrow on <details> */
 details summary::-webkit-details-marker { display: none; }
 
-/* Section eyebrow — small caps mono label used across the site */
-.eyebrow {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
+/* Small label used at most twice per page — uppercase, letter-spaced */
+.label {
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 11px;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   color: var(--forest-700);
 }
 
-/* Numbered indices — used in editorial grids */
-.index-num {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: clamp(40px, 5vw, 64px);
-  line-height: 1;
-  color: var(--clay-400);
-}
-
 /* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1); }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 /* Sticky header subtle border once scrolled */
-.is-scrolled { border-color: rgba(14,59,51,.12) !important; }
+.is-scrolled { border-color: rgba(14,59,51,.08) !important; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
@@ -62,14 +43,13 @@ details summary::-webkit-details-marker { display: none; }
     transition-duration: 0ms !important;
     scroll-behavior: auto !important;
   }
-  body { background-image: none; }
 }
 
-/* Focus ring (accessibility) */
+/* Focus ring */
 :where(a, button, input, select, textarea, summary):focus-visible {
-  outline: 2px solid var(--clay-400);
+  outline: 2px solid var(--forest-700);
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 /* Print friendly */
