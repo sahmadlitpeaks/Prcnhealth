@@ -31,200 +31,421 @@
 <main id="top">
 
 <!-- ============================================================
-     1 · HERO
+     1 · HERO — image-dominant, asymmetric
 ============================================================ -->
-<section class="pt-16 lg:pt-24 pb-20 lg:pb-28">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<section class="pt-8 lg:pt-12 pb-20 lg:pb-28">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
 
-    <div class="lg:col-span-7">
+    <!-- Top label row -->
+    <div class="flex items-baseline justify-between mb-8">
       <p class="label">Precision Health Group</p>
-      <h1 class="font-display text-forest-800 mt-6 leading-[0.98] text-[56px] sm:text-[80px] lg:text-[104px]">
-        Merging precise<br/>
-        science with<br/>
-        personalised care.
-      </h1>
-      <p class="mt-8 max-w-xl text-forest-800/75 text-lg leading-relaxed">
-        A group of four healthcare and wellness brands working under one banner — clinics, wellness centres, a curated shop and a teaching academy.
-      </p>
-      <div class="mt-10 flex flex-wrap gap-3">
-        <a href="#brands" class="inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-800 text-ivory text-sm font-medium px-6 py-3.5 rounded-full transition">
-          Our brands
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-        </a>
-        <a href="pages/talk-to-us.html" class="inline-flex items-center gap-2 text-forest-700 hover:text-forest-800 text-sm font-medium px-2 py-3.5">
-          Talk to us
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-      </div>
+      <p class="label hidden sm:block text-forest-700/55">Est. Dubai · 2018</p>
     </div>
 
-    <!-- One restrained visual -->
-    <div class="lg:col-span-5">
-      <div class="relative aspect-[4/5] rounded-md overflow-hidden bg-forest-800">
-        <div class="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(194,107,74,0.5),transparent_55%)]"></div>
-        <div class="absolute inset-0 opacity-50 bg-[radial-gradient(circle_at_70%_80%,rgba(168,192,175,0.35),transparent_50%)]"></div>
-        <div class="absolute bottom-7 left-7 right-7 text-ivory">
-          <p class="label text-ivory/65">Founded</p>
-          <p class="font-display text-2xl mt-2">Dubai · 2018</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
 
-<!-- ============================================================
-     2 · BRANDS
-============================================================ -->
-<section id="brands" class="border-t border-forest-200/60 py-20 lg:py-28">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <!-- Visual — dominant -->
+      <div class="lg:col-span-7 reveal">
+        <div class="relative">
+          <div class="aspect-[4/5] sm:aspect-[5/4] lg:aspect-[6/7] rounded-md scene scene--editorial">
+            <span class="scene-mark"></span>
 
-    <div class="max-w-2xl mb-14">
-      <p class="label">Our brands</p>
-      <h2 class="font-display text-forest-800 text-4xl lg:text-5xl mt-4 leading-[1.05]">
-        Four wellness companies, working as one.
-      </h2>
-    </div>
+            <!-- Layered art-direction inside the scene -->
+            <svg viewBox="0 0 600 700" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <linearGradient id="hLight" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#F8F4EC" stop-opacity=".15"/>
+                  <stop offset="100%" stop-color="#F8F4EC" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <!-- soft tonal arch -->
+              <path d="M0 380 Q 300 200, 600 380 L600 700 L0 700 Z" fill="url(#hLight)"/>
+              <!-- horizon line -->
+              <line x1="0" y1="450" x2="600" y2="445" stroke="#F8F4EC" stroke-opacity=".18" stroke-width="1"/>
+              <!-- discrete architectural anchors -->
+              <g stroke="#F8F4EC" stroke-opacity=".14" stroke-width="1" fill="none">
+                <path d="M120 450 L120 700"/><path d="M200 450 L200 700"/>
+                <path d="M400 445 L400 700"/><path d="M480 445 L480 700"/>
+              </g>
+            </svg>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-
-      <!-- Clinix -->
-      <a href="https://prcnclinix.com/" target="_blank" rel="noopener external" class="group block">
-        <div class="aspect-[4/5] rounded-md bg-forest-800 relative overflow-hidden mb-5">
-          <div class="absolute inset-0 opacity-50 bg-[radial-gradient(circle_at_50%_30%,rgba(194,107,74,0.45),transparent_60%)]"></div>
-          <span class="absolute top-5 left-5 label text-ivory/65">01</span>
-        </div>
-        <div class="flex items-baseline justify-between">
-          <h3 class="font-display text-2xl text-forest-800">Precision Clinix</h3>
-          <svg class="w-3.5 h-3.5 text-forest-700/50 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M7 7h10v10"/></svg>
-        </div>
-        <p class="text-sm text-forest-700/75 mt-2 leading-relaxed">Integrative medicine clinics powered by the Diamond System of Care.</p>
-      </a>
-
-      <!-- Wellness -->
-      <a href="https://prcnwellness.com/" target="_blank" rel="noopener external" class="group block">
-        <div class="aspect-[4/5] rounded-md relative overflow-hidden mb-5 grid grid-rows-3">
-          <div class="bg-forest-500"></div>
-          <div class="bg-forest-300"></div>
-          <div class="bg-forest-200"></div>
-          <span class="absolute top-5 left-5 label text-forest-900/70">02</span>
-        </div>
-        <div class="flex items-baseline justify-between">
-          <h3 class="font-display text-2xl text-forest-800">Precision Wellness</h3>
-          <svg class="w-3.5 h-3.5 text-forest-700/50 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M7 7h10v10"/></svg>
-        </div>
-        <p class="text-sm text-forest-700/75 mt-2 leading-relaxed">Three-zone wellness centres for healing, fitness and stillness.</p>
-      </a>
-
-      <!-- Shop -->
-      <a href="https://prcnstore.com/" target="_blank" rel="noopener external" class="group block">
-        <div class="aspect-[4/5] rounded-md bg-bone relative overflow-hidden mb-5">
-          <div class="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-2 p-6">
-            <div class="bg-forest-200 rounded-sm"></div>
-            <div class="bg-forest-700 rounded-sm"></div>
-            <div class="bg-clay-200 rounded-sm"></div>
-            <div class="bg-forest-300 rounded-sm"></div>
+            <!-- Bottom caption -->
+            <div class="absolute bottom-7 left-7 right-7 flex items-end justify-between text-ivory">
+              <div>
+                <p class="label text-ivory/55">Inside the flagship</p>
+                <p class="font-display text-2xl mt-2">Jumeirah · Dubai</p>
+              </div>
+              <p class="hidden sm:block label text-ivory/55">No. 01 / 06</p>
+            </div>
           </div>
-          <span class="absolute top-5 left-5 label text-forest-800/70">03</span>
         </div>
-        <div class="flex items-baseline justify-between">
-          <h3 class="font-display text-2xl text-forest-800">Precision Shop</h3>
-          <svg class="w-3.5 h-3.5 text-forest-700/50 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </div>
+
+      <!-- Headline + copy -->
+      <div class="lg:col-span-5 lg:pt-12 reveal">
+        <h1 class="font-display text-forest-800 leading-[0.96] text-[56px] sm:text-[88px] lg:text-[112px]">
+          Merging<br/>
+          precise science<br/>
+          with care.
+        </h1>
+        <p class="mt-8 max-w-md text-forest-800/75 text-lg leading-relaxed">
+          A house of four healthcare and wellness brands — clinics, wellness centres, a curated shop and a teaching academy — working under one banner.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-3">
+          <a href="#brands" class="inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-800 text-ivory text-sm font-medium px-6 py-3.5 rounded-full transition">
+            Our brands
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <a href="pages/talk-to-us.html" class="inline-flex items-center gap-2 text-forest-700 hover:text-forest-800 text-sm font-medium px-2 py-3.5">
+            Talk to us
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
         </div>
-        <p class="text-sm text-forest-700/75 mt-2 leading-relaxed">Tests, supplements and devices — vetted by our clinicians.</p>
+
+        <!-- Inline meta -->
+        <div class="mt-14 pt-6 border-t border-forest-200/70 grid grid-cols-3 gap-6 max-w-md">
+          <div><p class="font-display text-2xl text-forest-800">04</p><p class="label text-forest-700/55 mt-1">Brands</p></div>
+          <div><p class="font-display text-2xl text-forest-800">06</p><p class="label text-forest-700/55 mt-1">Centres</p></div>
+          <div><p class="font-display text-2xl text-forest-800">12.4k</p><p class="label text-forest-700/55 mt-1">Patients</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2 · BRANDS — large cards, hover scale + label slide
+============================================================ -->
+<section id="brands" class="bg-bone py-20 lg:py-28">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+
+    <div class="grid lg:grid-cols-12 gap-10 mb-14 items-end">
+      <div class="lg:col-span-7">
+        <p class="label">Our brands</p>
+        <h2 class="font-display text-forest-800 text-4xl lg:text-6xl mt-4 leading-[0.98]">
+          Four wellness companies,<br/>working as one.
+        </h2>
+      </div>
+      <p class="lg:col-span-5 text-forest-700/75 max-w-md">
+        Each brand is operationally independent and culturally aligned — built so that a patient (and their data) flows seamlessly between them.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+      <!-- 01 Clinix -->
+      <a href="https://prcnclinix.com/" target="_blank" rel="noopener external" class="card group block">
+        <div class="card-img relative">
+          <div class="aspect-[4/5] rounded-md scene scene--clinic">
+            <span class="scene-mark"></span>
+            <svg viewBox="0 0 200 250" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <g stroke="#F8F4EC" stroke-opacity=".22" stroke-width=".7" fill="none">
+                <path d="M30 180 Q 100 130, 170 180"/>
+                <path d="M30 195 Q 100 150, 170 195"/>
+                <path d="M30 210 Q 100 170, 170 210"/>
+              </g>
+              <circle cx="100" cy="100" r="36" fill="none" stroke="#F8F4EC" stroke-opacity=".25" stroke-width=".7"/>
+            </svg>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 text-ivory flex items-end justify-between">
+            <span class="label text-ivory/65 card-label">01 · Clinic</span>
+            <svg class="w-3.5 h-3.5 text-ivory/65 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </div>
+        </div>
+        <div class="mt-5">
+          <h3 class="font-display text-2xl text-forest-800 leading-tight">Precision Clinix</h3>
+          <p class="text-sm text-forest-700/75 mt-2 leading-relaxed">Integrative medicine clinics powered by the Diamond System of Care.</p>
+        </div>
       </a>
 
-      <!-- Academy -->
-      <a href="pages/academy.html" class="group block">
-        <div class="aspect-[4/5] rounded-md bg-forest-700 relative overflow-hidden mb-5">
-          <div class="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_70%_70%,rgba(168,192,175,0.5),transparent_55%)]"></div>
-          <span class="absolute top-5 left-5 label text-ivory/65">04</span>
+      <!-- 02 Wellness -->
+      <a href="https://prcnwellness.com/" target="_blank" rel="noopener external" class="card group block">
+        <div class="card-img relative">
+          <div class="aspect-[4/5] rounded-md scene scene--wellness">
+            <span class="scene-mark"></span>
+            <svg viewBox="0 0 200 250" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <g stroke="#0E3B33" stroke-opacity=".22" stroke-width=".7" fill="none">
+                <circle cx="60" cy="100" r="22"/>
+                <circle cx="140" cy="120" r="30"/>
+                <path d="M40 200 L160 200"/>
+              </g>
+            </svg>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 text-forest-900 flex items-end justify-between">
+            <span class="label card-label">02 · Wellness</span>
+            <svg class="w-3.5 h-3.5 text-forest-900/70 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </div>
         </div>
-        <div class="flex items-baseline justify-between">
-          <h3 class="font-display text-2xl text-forest-800">Precision Academy</h3>
-          <svg class="w-3.5 h-3.5 text-forest-700/50 transition group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        <div class="mt-5">
+          <h3 class="font-display text-2xl text-forest-800 leading-tight">Precision Wellness</h3>
+          <p class="text-sm text-forest-700/75 mt-2 leading-relaxed">Three-zone wellness centres for healing, fitness and stillness.</p>
         </div>
-        <p class="text-sm text-forest-700/75 mt-2 leading-relaxed">Self-paced courses and a clinical residency for practitioners.</p>
+      </a>
+
+      <!-- 03 Shop -->
+      <a href="https://prcnstore.com/" target="_blank" rel="noopener external" class="card group block">
+        <div class="card-img relative">
+          <div class="aspect-[4/5] rounded-md scene scene--shop">
+            <span class="scene-mark"></span>
+            <!-- product still-life suggestion -->
+            <svg viewBox="0 0 200 250" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <g fill="none" stroke="#0E3B33" stroke-opacity=".25" stroke-width=".7">
+                <rect x="55" y="90" width="35" height="100" rx="3"/>
+                <rect x="100" y="120" width="45" height="70" rx="3"/>
+                <line x1="40" y1="200" x2="160" y2="200"/>
+              </g>
+            </svg>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 text-forest-900 flex items-end justify-between">
+            <span class="label card-label">03 · Shop</span>
+            <svg class="w-3.5 h-3.5 text-forest-900/70 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </div>
+        </div>
+        <div class="mt-5">
+          <h3 class="font-display text-2xl text-forest-800 leading-tight">Precision Shop</h3>
+          <p class="text-sm text-forest-700/75 mt-2 leading-relaxed">Tests, supplements and devices — vetted by our clinicians.</p>
+        </div>
+      </a>
+
+      <!-- 04 Academy -->
+      <a href="pages/academy.html" class="card group block">
+        <div class="card-img relative">
+          <div class="aspect-[4/5] rounded-md scene scene--academy">
+            <span class="scene-mark"></span>
+            <svg viewBox="0 0 200 250" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <g stroke="#F8F4EC" stroke-opacity=".22" stroke-width=".7" fill="none">
+                <path d="M0 70 H200"/><path d="M0 95 H200"/><path d="M0 120 H200"/><path d="M0 145 H200"/>
+              </g>
+              <g stroke="#C26B4A" stroke-opacity=".55" fill="none" stroke-width="1">
+                <path d="M30 200 L70 130 L120 165 L170 100"/>
+                <circle cx="170" cy="100" r="3" fill="#C26B4A"/>
+              </g>
+            </svg>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 text-ivory flex items-end justify-between">
+            <span class="label text-ivory/65 card-label">04 · Academy</span>
+            <svg class="w-3.5 h-3.5 text-ivory/65 transition group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+        <div class="mt-5">
+          <h3 class="font-display text-2xl text-forest-800 leading-tight">Precision Academy</h3>
+          <p class="text-sm text-forest-700/75 mt-2 leading-relaxed">Self-paced courses and a clinical residency for practitioners.</p>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     3 · QUIET PROOF — one paragraph + three numbers
+     3 · INSIDE — three-image moodboard collage
+============================================================ -->
+<section class="py-20 lg:py-32">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14">
+
+      <!-- Tall left image -->
+      <div class="lg:col-span-5">
+        <figure class="reveal">
+          <div class="aspect-[4/5] rounded-md scene scene--soft">
+            <span class="scene-mark"></span>
+            <svg viewBox="0 0 400 500" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <g stroke="#0E3B33" stroke-opacity=".18" stroke-width=".8" fill="none">
+                <path d="M40 380 Q 200 280, 360 380"/>
+                <path d="M40 410 Q 200 320, 360 410"/>
+                <circle cx="120" cy="200" r="50"/>
+                <circle cx="280" cy="240" r="36"/>
+              </g>
+            </svg>
+          </div>
+          <figcaption class="mt-4 flex items-baseline justify-between">
+            <span class="label text-forest-700/55">Healing zone · Wellness</span>
+            <span class="label text-forest-700/40">No. 02 / 06</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Right column: editorial copy + 2 stacked images -->
+      <div class="lg:col-span-7 lg:pt-10">
+        <p class="label">Inside</p>
+        <h2 class="font-display text-forest-800 text-4xl lg:text-5xl mt-4 leading-[1.05]">
+          Eight years on, more than twelve thousand patients have moved through our centres.
+        </h2>
+        <p class="mt-6 max-w-xl text-forest-700/75 text-lg leading-relaxed">
+          Each visit is part of one ecosystem — a discovery, a diagnosis, a protocol, and the long tail of refinement that makes wellness stick.
+        </p>
+
+        <div class="mt-12 grid grid-cols-2 gap-5 lg:gap-6">
+          <figure class="reveal">
+            <div class="aspect-[4/3] rounded-md scene scene--academy">
+              <span class="scene-mark"></span>
+              <svg viewBox="0 0 300 225" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <g stroke="#F8F4EC" stroke-opacity=".22" stroke-width=".7" fill="none">
+                  <path d="M40 160 H260"/><path d="M40 175 H260"/>
+                  <rect x="80" y="90" width="140" height="60" rx="2"/>
+                </g>
+              </svg>
+            </div>
+            <figcaption class="mt-3 flex items-baseline justify-between">
+              <span class="label text-forest-700/55">Lecture · Academy</span>
+              <span class="label text-forest-700/40">03 / 06</span>
+            </figcaption>
+          </figure>
+          <figure class="reveal">
+            <div class="aspect-[4/3] rounded-md scene scene--shop">
+              <span class="scene-mark"></span>
+              <svg viewBox="0 0 300 225" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <g stroke="#0E3B33" stroke-opacity=".25" stroke-width=".7" fill="none">
+                  <rect x="80" y="80" width="36" height="100" rx="3"/>
+                  <rect x="130" y="100" width="42" height="80" rx="3"/>
+                  <rect x="186" y="90" width="34" height="90" rx="3"/>
+                </g>
+              </svg>
+            </div>
+            <figcaption class="mt-3 flex items-baseline justify-between">
+              <span class="label text-forest-700/55">Foundations · Shop</span>
+              <span class="label text-forest-700/40">04 / 06</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4 · MEASURED — full-bleed dark moment
+============================================================ -->
+<section class="bg-forest-800 text-ivory py-24 lg:py-32 overflow-hidden">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-end">
+    <div class="lg:col-span-7">
+      <p class="label text-clay-200">Measured outcomes</p>
+      <h2 class="font-display text-ivory text-4xl lg:text-6xl mt-4 leading-[1.02]">
+        If we can't measure it,<br/>we don't promise it.
+      </h2>
+      <p class="mt-7 max-w-xl text-ivory/70 text-lg leading-relaxed">
+        Every protocol is reviewed at thirty, sixty and ninety days. Every centre reports against the same scorecard, every quarter, to the same board.
+      </p>
+    </div>
+    <dl class="lg:col-span-5 grid grid-cols-2 gap-x-8 gap-y-10">
+      <div class="border-l border-ivory/15 pl-5">
+        <dt class="label text-ivory/50">Patients</dt>
+        <dd class="font-display text-ivory text-5xl mt-3">12,400+</dd>
+      </div>
+      <div class="border-l border-ivory/15 pl-5">
+        <dt class="label text-ivory/50">Recommend us</dt>
+        <dd class="font-display text-ivory text-5xl mt-3">98%</dd>
+      </div>
+      <div class="border-l border-ivory/15 pl-5">
+        <dt class="label text-ivory/50">Centres</dt>
+        <dd class="font-display text-ivory text-5xl mt-3">06</dd>
+      </div>
+      <div class="border-l border-ivory/15 pl-5">
+        <dt class="label text-ivory/50">Practitioners</dt>
+        <dd class="font-display text-ivory text-5xl mt-3">35+</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============================================================
+     5 · CORPORATE + ACADEMY (cross promo, image-led)
+============================================================ -->
+<section class="py-20 lg:py-32">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-6 lg:gap-8">
+
+    <!-- Corporate -->
+    <a href="pages/corporate-health-packages.html" class="card group block">
+      <div class="card-img relative">
+        <div class="aspect-[5/4] rounded-md scene scene--soft">
+          <span class="scene-mark"></span>
+          <svg viewBox="0 0 500 400" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g stroke="#0E3B33" stroke-opacity=".22" stroke-width=".8" fill="none">
+              <path d="M50 280 H450"/><path d="M50 310 H450"/>
+              <path d="M100 230 L150 200 L250 240 L350 180 L420 220" />
+              <circle cx="100" cy="230" r="3" fill="#0E3B33"/>
+              <circle cx="150" cy="200" r="3" fill="#0E3B33"/>
+              <circle cx="250" cy="240" r="3" fill="#0E3B33"/>
+              <circle cx="350" cy="180" r="3" fill="#0E3B33"/>
+              <circle cx="420" cy="220" r="3" fill="#C26B4A"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="mt-6 flex items-baseline justify-between gap-6">
+        <div>
+          <p class="label text-forest-700/55">For employers</p>
+          <h3 class="font-display text-3xl lg:text-4xl text-forest-800 mt-3 leading-[1.05]">Corporate Health Packages</h3>
+          <p class="mt-3 text-forest-700/75 max-w-md">Annual panels, on-site clinics and longevity programmes for teams of fifty to five thousand.</p>
+        </div>
+        <svg class="w-5 h-5 text-forest-700 shrink-0 mt-2 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- Academy -->
+    <a href="pages/academy.html" class="card group block">
+      <div class="card-img relative">
+        <div class="aspect-[5/4] rounded-md scene scene--academy">
+          <span class="scene-mark"></span>
+          <svg viewBox="0 0 500 400" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g stroke="#F8F4EC" stroke-opacity=".22" stroke-width=".7" fill="none">
+              <path d="M50 130 H450"/><path d="M50 170 H450"/><path d="M50 210 H450"/><path d="M50 250 H450"/>
+              <rect x="120" y="60" width="260" height="40" rx="2"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="mt-6 flex items-baseline justify-between gap-6">
+        <div>
+          <p class="label text-forest-700/55">For practitioners</p>
+          <h3 class="font-display text-3xl lg:text-4xl text-forest-800 mt-3 leading-[1.05]">Precision Academy</h3>
+          <p class="mt-3 text-forest-700/75 max-w-md">Self-paced courses on nutritional medicine, gut microbiome, herbal and functional medicine — plus a residency in Dubai.</p>
+        </div>
+        <svg class="w-5 h-5 text-forest-700 shrink-0 mt-2 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     6 · CONTACT — quiet, with one visual anchor
 ============================================================ -->
 <section class="bg-bone py-20 lg:py-28">
-  <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <p class="font-display text-forest-800 text-3xl lg:text-4xl leading-[1.25]">
-      Eight years on, the group serves more than twelve thousand patients across the UAE through six centres and a network of thirty-five practitioners — guided by a single conviction: care, designed around the person.
-    </p>
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 items-center">
 
-    <div class="mt-14 pt-10 border-t border-forest-200 grid grid-cols-3 gap-8 max-w-2xl">
-      <div>
-        <p class="font-display text-4xl text-forest-800">12,400+</p>
-        <p class="text-sm text-forest-700/65 mt-2">patients to date</p>
-      </div>
-      <div>
-        <p class="font-display text-4xl text-forest-800">06</p>
-        <p class="text-sm text-forest-700/65 mt-2">centres in the UAE</p>
-      </div>
-      <div>
-        <p class="font-display text-4xl text-forest-800">35+</p>
-        <p class="text-sm text-forest-700/65 mt-2">practitioners on staff</p>
+    <div class="lg:col-span-4">
+      <div class="aspect-[4/5] rounded-md scene scene--editorial">
+        <span class="scene-mark"></span>
+        <div class="absolute bottom-6 left-6 right-6 text-ivory">
+          <p class="label text-ivory/55">Group HQ</p>
+          <p class="font-display text-2xl mt-2">Villa 24, Al Wasl Rd</p>
+          <p class="text-ivory/65 text-sm mt-1">Jumeirah · Dubai</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ============================================================
-     4 · CORPORATE + ACADEMY (cross promo)
-============================================================ -->
-<section class="py-20 lg:py-28">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-6 lg:gap-8">
-
-    <a href="pages/corporate-health-packages.html" class="group block bg-bone hover:bg-clay-50 rounded-md p-8 lg:p-12 transition">
-      <p class="label text-forest-700/70">For employers</p>
-      <h3 class="font-display text-3xl lg:text-4xl text-forest-800 mt-5 leading-[1.1]">Corporate Health Packages</h3>
-      <p class="mt-5 text-forest-700/75 max-w-md">Annual panels, on-site clinics and longevity programmes for teams of fifty to five thousand.</p>
-      <span class="mt-8 inline-flex items-center gap-2 text-sm font-medium text-forest-700">
-        Explore packages
-        <svg class="w-4 h-4 transition group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </span>
-    </a>
-
-    <a href="pages/academy.html" class="group block bg-forest-700 hover:bg-forest-800 text-ivory rounded-md p-8 lg:p-12 transition">
-      <p class="label text-ivory/55">For practitioners</p>
-      <h3 class="font-display text-3xl lg:text-4xl mt-5 leading-[1.1]">Precision Academy</h3>
-      <p class="mt-5 text-ivory/75 max-w-md">Self-paced courses on nutritional medicine, gut microbiome, herbal and functional medicine — plus a residency in Dubai.</p>
-      <span class="mt-8 inline-flex items-center gap-2 text-sm font-medium text-ivory">
-        Visit Academy
-        <svg class="w-4 h-4 transition group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </span>
-    </a>
-  </div>
-</section>
-
-<!-- ============================================================
-     5 · CONTACT — quiet
-============================================================ -->
-<section class="border-t border-forest-200/60 py-20 lg:py-28">
-  <div class="max-w-5xl mx-auto px-6 lg:px-10 grid md:grid-cols-12 gap-10 items-end">
-    <div class="md:col-span-7">
+    <div class="lg:col-span-8">
       <p class="label">Get in touch</p>
-      <h2 class="font-display text-forest-800 text-4xl lg:text-5xl mt-4 leading-[1.05]">A real human responds within one business day.</h2>
-    </div>
-    <div class="md:col-span-5 space-y-3">
-      <a href="pages/talk-to-us.html" class="flex items-center justify-between p-5 border border-forest-200 hover:border-forest-700 rounded-md transition group">
-        <span><span class="block label text-forest-700/60">Patients</span><span class="block font-display text-xl text-forest-800 mt-1">Book a consult</span></span>
-        <svg class="w-4 h-4 text-forest-700 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-      <a href="mailto:hello@prcnhealth.com" class="flex items-center justify-between p-5 border border-forest-200 hover:border-forest-700 rounded-md transition group">
-        <span><span class="block label text-forest-700/60">Email</span><span class="block font-display text-xl text-forest-800 mt-1">hello@prcnhealth.com</span></span>
-        <svg class="w-4 h-4 text-forest-700 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-      <a href="tel:+97140000000" class="flex items-center justify-between p-5 border border-forest-200 hover:border-forest-700 rounded-md transition group">
-        <span><span class="block label text-forest-700/60">Call</span><span class="block font-display text-xl text-forest-800 mt-1">+971 4 000 0000</span></span>
-        <svg class="w-4 h-4 text-forest-700 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
+      <h2 class="font-display text-forest-800 text-4xl lg:text-6xl mt-4 leading-[0.98]">
+        A real human responds<br/>within one business day.
+      </h2>
+      <div class="mt-10 grid sm:grid-cols-3 gap-4">
+        <a href="pages/talk-to-us.html" class="group block p-5 border border-forest-200 hover:border-forest-700 rounded-md transition">
+          <p class="label text-forest-700/55">Patients</p>
+          <p class="font-display text-xl text-forest-800 mt-2">Book a consult</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 text-sm text-forest-700">Open form <svg class="w-3.5 h-3.5 transition group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="mailto:hello@prcnhealth.com" class="group block p-5 border border-forest-200 hover:border-forest-700 rounded-md transition">
+          <p class="label text-forest-700/55">Email</p>
+          <p class="font-display text-xl text-forest-800 mt-2">hello@prcnhealth.com</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 text-sm text-forest-700">Send <svg class="w-3.5 h-3.5 transition group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="tel:+97140000000" class="group block p-5 border border-forest-200 hover:border-forest-700 rounded-md transition">
+          <p class="label text-forest-700/55">Call</p>
+          <p class="font-display text-xl text-forest-800 mt-2">+971 4 000 0000</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 text-sm text-forest-700">Reception <svg class="w-3.5 h-3.5 transition group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
     </div>
   </div>
 </section>

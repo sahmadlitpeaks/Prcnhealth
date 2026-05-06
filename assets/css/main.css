@@ -1,25 +1,27 @@
 /* =============================================================
    Precision Health Group — main.css
-   Quieter visual layer. Borders carry the structure; clay is rare.
+   Calm but visually present. Carries weight through layered
+   gradient meshes, generous scale and tasteful hover states —
+   not through editorial cosplay or busy decoration.
    ============================================================= */
 
 :root {
   --forest-700: #0E3B33;
   --forest-800: #092A24;
   --forest-900: #051A16;
+  --forest-300: #739783;
   --clay-400:   #C26B4A;
+  --clay-200:   #E5B59E;
   --ivory:      #F8F4EC;
   --bone:       #EEE6D6;
 }
 
 html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
-
 body { background: var(--ivory); }
 
-/* Hide native arrow on <details> */
 details summary::-webkit-details-marker { display: none; }
 
-/* Small label used at most twice per page — uppercase, letter-spaced */
+/* Quiet uppercase label, used at most twice per page */
 .label {
   font-family: 'Manrope', system-ui, sans-serif;
   font-size: 11px;
@@ -29,8 +31,91 @@ details summary::-webkit-details-marker { display: none; }
   color: var(--forest-700);
 }
 
+/* --- Atmospheric photo stand-ins ----------------------------------------
+   Each .scene preset is a multi-layer radial gradient that reads as a
+   piece of art-direction (warm interior, cool wellness room, clay-toned
+   product still life, etc.) rather than a decorative pattern. */
+.scene {
+  position: relative;
+  overflow: hidden;
+  background: var(--forest-800);
+  isolation: isolate;
+}
+.scene::before, .scene::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+}
+/* Warm clinic interior */
+.scene--clinic {
+  background:
+    radial-gradient(120% 80% at 80% 30%, rgba(194,107,74,.45), transparent 55%),
+    radial-gradient(90% 70% at 20% 80%, rgba(115,151,131,.45), transparent 60%),
+    radial-gradient(60% 60% at 50% 60%, rgba(248,244,236,.08), transparent 70%),
+    linear-gradient(180deg, #0E3B33 0%, #092A24 100%);
+}
+/* Soft sage wellness */
+.scene--wellness {
+  background:
+    radial-gradient(100% 70% at 70% 30%, rgba(229,181,158,.55), transparent 60%),
+    radial-gradient(80% 80% at 20% 100%, rgba(115,151,131,.55), transparent 55%),
+    radial-gradient(60% 50% at 50% 50%, rgba(248,244,236,.18), transparent 70%),
+    linear-gradient(180deg, #DCEDE8 0%, #A8C0AF 100%);
+}
+/* Clay product still-life */
+.scene--shop {
+  background:
+    radial-gradient(80% 60% at 30% 30%, rgba(208,138,106,.4), transparent 60%),
+    radial-gradient(70% 60% at 80% 70%, rgba(14,59,51,.5), transparent 60%),
+    linear-gradient(180deg, #FAF1EC 0%, #E5B59E 100%);
+}
+/* Library / academy */
+.scene--academy {
+  background:
+    radial-gradient(110% 70% at 30% 30%, rgba(115,151,131,.5), transparent 60%),
+    radial-gradient(70% 60% at 80% 90%, rgba(194,107,74,.4), transparent 55%),
+    linear-gradient(180deg, #0E3B33 0%, #051A16 100%);
+}
+/* Editorial open scene — for hero photo stand-in */
+.scene--editorial {
+  background:
+    radial-gradient(60% 45% at 30% 25%, rgba(229,181,158,.55), transparent 65%),
+    radial-gradient(80% 70% at 80% 80%, rgba(14,59,51,.7), transparent 60%),
+    radial-gradient(50% 50% at 50% 50%, rgba(248,244,236,.12), transparent 80%),
+    linear-gradient(160deg, #1B5048 0%, #051A16 100%);
+}
+/* Light warm scene — for inside collage */
+.scene--soft {
+  background:
+    radial-gradient(70% 55% at 30% 35%, rgba(248,244,236,.6), transparent 70%),
+    radial-gradient(60% 60% at 80% 80%, rgba(229,181,158,.5), transparent 60%),
+    linear-gradient(180deg, #F4EFE6 0%, #E5B59E 100%);
+}
+
+/* Optional subtle horizon line on dark scenes */
+.scene--horizon::after {
+  background: linear-gradient(0deg, transparent 0%, transparent 49.5%, rgba(248,244,236,.08) 50%, transparent 50.5%, transparent 100%);
+}
+
+/* Tiny corner mark — appears on every scene as understated brand detail */
+.scene-mark {
+  position: absolute; top: 1.25rem; left: 1.25rem;
+  width: 24px; height: 24px;
+  border: 1px solid rgba(248,244,236,.45);
+  border-right: none; border-bottom: none;
+  pointer-events: none;
+}
+.scene--soft .scene-mark, .scene--wellness .scene-mark, .scene--shop .scene-mark {
+  border-color: rgba(14,59,51,.35);
+}
+
+/* Image-card hover: gentle scale + label slide */
+.card-img { overflow: hidden; }
+.card-img > .scene { transition: transform .9s cubic-bezier(.2,.8,.2,1); }
+.card:hover .card-img > .scene { transform: scale(1.04); }
+.card-label { transform: translateY(0); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+.card:hover .card-label { transform: translateY(-4px); }
+
 /* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1); }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 /* Sticky header subtle border once scrolled */
@@ -38,11 +123,8 @@ details summary::-webkit-details-marker { display: none; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0ms !important;
-    transition-duration: 0ms !important;
-    scroll-behavior: auto !important;
-  }
+  *, *::before, *::after { animation-duration: 0ms !important; transition-duration: 0ms !important; scroll-behavior: auto !important; }
+  .card:hover .card-img > .scene { transform: none; }
 }
 
 /* Focus ring */
@@ -52,8 +134,8 @@ details summary::-webkit-details-marker { display: none; }
   border-radius: 2px;
 }
 
-/* Print friendly */
 @media print {
   header, footer, .fixed { display: none !important; }
   body { background: #fff; color: #000; }
+  .scene { background: #eee !important; }
 }
