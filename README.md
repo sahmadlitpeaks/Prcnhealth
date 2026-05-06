@@ -1,24 +1,38 @@
-# Precision Health Group — UX Redesign
+# Precision Health Group — Parent-Brand Redesign
 
-A premium, conversion-focused redesign of **prcnhealth.com** — built in clean,
-modular HTML + Tailwind CSS, ready to be ported to WordPress.
+A premium, editorial redesign of **prcnhealth.com** — the **parent group** site
+that introduces and routes visitors to its **four sub-brands**:
+
+> **Clinix · Wellness · Shop · Academy**
+
+This redesign is intentionally distinct from any sub-brand site (e.g. PHCX,
+Precision Wellness) — different typography, palette, layout grammar and
+information architecture, so the group stands as a **"house of brands"**, not
+just another clinic landing page.
+
+---
 
 ## What's in here
 
 | File / folder | Purpose |
 | --- | --- |
-| `index.html` | Full homepage (12 sections, mobile → desktop responsive) |
-| `pages/` | Sub-pages — Services, Therapies, Clinics, Shop, About, Franchise |
-| `assets/css/main.css` | Custom layer (focus rings, reveal animation, motion-safety) |
-| `assets/js/main.js` | Mobile menu, sticky header, reveal-on-scroll, counters, FAQ, form UX |
-| `assets/js/includes.js` | Shared header/footer loader → becomes `header.php` / `footer.php` in WP |
-| `assets/js/tailwind-config.js` | Theme tokens shared across sub-pages |
+| `index.html` | Group homepage — editorial portfolio of the four brands |
+| `pages/about.html` | Group story, mission, principles, timeline |
+| `pages/team.html` | Group leadership + team-by-brand |
+| `pages/clinics.html` | Brand 01 · Precision Health **Clinix** + Diamond System of Care™ |
+| `pages/zones.html` | Brand 02 · Precision **Wellness** centres (3 zones) |
+| `pages/shop.html` | Brand 03 · Precision **Shop** (curated retail) |
+| `pages/academy.html` | Brand 04 · Precision **Academy** (education) |
+| `pages/therapies.html` | Group-level therapies catalogue |
+| `pages/protocols.html` | Group-level signature protocols (Reset / Restore / Longevity) |
+| `pages/franchise.html` | Operator / investor licensing |
+| `assets/css/main.css` | Editorial layer (paper texture, eyebrows, index nums, focus) |
+| `assets/js/main.js` | Mobile menu, sticky header, reveal-on-scroll, FAQ, form UX |
+| `assets/js/includes.js` | Shared header/footer loader (becomes WP `header.php`/`footer.php`) |
+| `assets/js/tailwind-config.js` | Theme tokens shared across pages |
 | `tailwind.config.js` | Production-build theme (mirrors the JS config above) |
-| `assets/img/favicon.svg` | Inline SVG favicon |
 
 ## Run it
-
-It's pure static HTML — open `index.html` in any browser, or:
 
 ```bash
 cd Prcnhealth
@@ -31,133 +45,128 @@ proper Tailwind build with the included `tailwind.config.js`.
 
 ---
 
-# UX & Conversion Audit — current site → redesign
+## Design system — distinct from any sub-brand
 
-## Weak areas identified on the live site
+| Token | Value | Why |
+| --- | --- | --- |
+| Display | **DM Serif Display** (high-contrast modern serif) | Editorial, holding-company feel |
+| Body / UI | **Manrope** (geometric humanist sans) | Quiet, calm, authoritative |
+| Numerals / labels | **JetBrains Mono** | Editorial section markers (§ I, § II) |
+| Primary | `forest-700 #0E3B33` | Deeper, more corporate than a clinic green |
+| Accent | `clay-400 #C26B4A` | Warm terracotta — not gold; not "premium clinic" cliché |
+| Background | `ivory #F8F4EC` with subtle paper-grain gradient | Magazine page texture |
+| Surface | `bone #EEE6D6` | Quiet section bands |
 
-> The audit below is informed by the live site's structure and brand
-> positioning (Precision Health Group, UAE — integrative-medicine clinics +
-> telehealth + therapies + shop + franchise). Specific recommendations are
-> reflected in the redesign.
+**Layout grammar:** editorial 12-column grids, `§` section markers, monospace
+labels, large display numerals as indices, alternating brand spotlights instead
+of card walls. Borders and dividers do most of the work — shadows are minimal.
 
-| # | Weakness on the live site | Why it costs conversions | What the redesign does |
-| - | --- | --- | --- |
-| 1 | Hero doesn't lead with a single, sharp value proposition | Visitors guess what they're looking at and bounce in <10s | New hero: "Truly well, by design." + sub-line + two CTAs (book / explore) above the fold |
-| 2 | "What we do" is fragmented across multiple sub-brands (Clinix, Shop, Hub, Franchise) — no map | Decision fatigue → analysis paralysis | New **Four Pillars** section gives every visitor a clear "I'm here for X" entry point in one screen |
-| 3 | Diamond System of Care™ is a tagline, not a story | Loses the strongest differentiator | Dedicated dark section explaining the 4 facets — Discover · Diagnose · Design · Deliver |
-| 4 | Trust signals scattered, no insurance / cert visibility | Healthcare buyers gate on trust | Sticky announcement bar + trust marquee + stats block + 5★ social proof in hero |
-| 5 | No clear pricing or "what does it cost" anchor | Visitors leave to find this info elsewhere | Every therapy + product card carries a **From AED…** price |
-| 6 | CTAs ambiguous ("Contact", "Learn more") | Low click-through | All primary CTAs use action verbs + value: *Start with a free discovery call*, *Book my free consult*, *Request the prospectus* |
-| 7 | No conversion form on the homepage | Forces a second pageload — drop-off | Inline booking form in section #12 with first-name → email → topic flow |
-| 8 | Mobile nav appears overloaded with 8+ top-level items | Thumb-fatigue, miss-taps | New mobile menu: 6 destinations + a single primary CTA pinned at the bottom |
-| 9 | Limited motion/visual interest → "feels like a brochure" | Lower engagement, time-on-page | Subtle reveal-on-scroll, floating cards, marquee, hover-lift cards — no perf cost |
-| 10 | Footer isn't doing recovery work | Bouncy visitors leave with nothing | New footer: newsletter capture + 16 secondary links + social + persistent floating "Talk to us" CTA |
+---
 
-## Conversion funnel — before vs. after
+## Why this is *not* a clinic site
 
-```
-BEFORE                                    AFTER
-─────────────────────────────────────────────────────────────────────
-Land on home  → Guess intent          →   Land on home → 1-line hero
-    ↓                                     hits intent in <2 sec
-Hunt through nav                          ↓
-    ↓                                     Pick 1 of 4 pillars
-Open service page                         (or scroll to learn more)
-    ↓                                     ↓
-Find no price/no proof                    See proof, price & process
-    ↓                                     in one section
-Open Contact page                         ↓
-    ↓                                     Inline booking form
-Fill long form                            with 4 essential fields
-    ↓                                     ↓
-Wait for callback                         Immediate "we'll call in 1
-                                          business day" confirmation
-```
+The old draft framed prcnhealth.com as a single clinic with a "book consult"
+funnel. The actual site is the **parent holding** — its job is to introduce a
+portfolio of four brands and route visitors to the right door. So the new
+redesign:
+
+- Replaces "Book a free consult" hero with "Meet the four brands" + group
+  manifesto.
+- Replaces the clinic-style four-card row with **four full-section editorial
+  spotlights** (one per sub-brand).
+- Moves the **Diamond System of Care™** off the homepage into the **Clinix
+  brand page**, where it actually belongs (it's a Clinix methodology, not a
+  group-level differentiator).
+- Adds **Academy** and **Protocols** — both real entities on prcnhealth.com
+  that were missing from the previous draft.
+- Replaces the single conversion CTA with a **"three doors" routing block**:
+  *Patient → Clinix · Practitioner → Academy · Operator → Franchise.*
+- Reframes the navigation around the actual IA on prcnhealth.com:
+  About · Team · Brands (mega-menu) · Therapies · Protocols · Franchise.
+
+---
 
 ## Homepage flow (top → bottom)
 
-1. **Announcement bar** — insurance partners + free consult anchor
-2. **Sticky nav** — 5 top-level items, with a mega-menu for "What we do"
-3. **Hero** — value prop, CTAs, social proof strip, decorative visual with floating UI
-4. **Trust marquee** — insurance + lab + certification logos (auto-scroll, pause on hover)
-5. **Four Pillars** — Telehealth, Clinix, Therapies, Shop (entry points)
-6. **Diamond System of Care™** — the differentiator, dark sectioned for emphasis
-7. **Signature Therapies** — 6 cards with category, price, CTA
-8. **Wellness Hub** — three-zone visual story
-9. **Stats** — animated counters (12k+, 98%, 35+, 1st)
-10. **Testimonials** — 3 voices with star ratings
-11. **Franchise teaser** — investor-grade card with proof points
-12. **Journal teaser** — 3 articles to retain non-buyers
-13. **FAQ** — 5 highest-friction questions, accordion
-14. **Booking CTA + form** — final conversion surface
-15. **Footer + floating CTA** — newsletter, secondary nav, "Talk to us" persistent button
+1. **Top bar** — Group locator + Academy notice + Talk-to-us
+2. **Sticky nav** — About / Team / Brands (mega) / Therapies / Protocols / Franchise
+3. **§ Hero** — Group tagline ("Merging precise science with personalised care") + editor's-note sidebar
+4. **Marquee** — Italicised brand-attribute words (Integrative · Functional · Regenerative …)
+5. **§ I · Mission** — Editorial intro paragraph
+6. **§ II · The Brands** — Four full-section spotlights (alternating 5/5 grid):
+   01 Clinix · 02 Wellness · 03 Shop · 04 Academy
+7. **§ III · Methodology** — Four operating principles binding the group
+8. **§ IV · Group in numbers** — Dark scorecard (12.4k / 06 / 35+ / 98%)
+9. **§ V · In press** — Italic publication credibility row
+10. **§ VI · Signature Protocols** — Reset / Restore / Longevity
+11. **§ VII · Voices** — Four editorial testimonials (one per brand)
+12. **§ VIII · Franchise teaser** — Operator entry
+13. **§ IX · The Journal** — Three editorial article cards
+14. **§ X · Three doors** — Routing block (Patient / Practitioner / Operator)
+15. **Footer** — Brand-grouped link columns + newsletter
 
-## Recommendations to lift engagement & reduce bounce
+---
 
-### Immediate (UI-level — covered in this redesign)
-- Replace generic hero with a **promise + proof + CTA** structure
-- Add **price transparency** on every commercial element
-- Pin a **persistent "Talk to us" CTA** (bottom-right) on every page
-- Surface **insurance acceptance** in announcement bar — 30% of UAE healthcare drop-offs are insurance gating
-- Use **mega-menu** instead of long flat nav — easier to scan, easier to expand
+## UX & conversion improvements
 
-### Short-term (content + behaviour)
-- Add **doctor bios** with photos, credentials and short videos
-- Run an **interactive "find my protocol"** quiz on the homepage (3-step → consult)
-- Add **before/after biomarker stories** (with anonymised lab snapshots)
-- Replace stock copy with **patient outcomes** in numbers ("migraines down 86%")
-- A/B test the hero headline — "Truly well, by design." vs. "Stop guessing. Start healing."
+### Versus the live site
+- Clearer answer to the most basic question: *"Which brand do I need?"*
+- Brand portfolio shown above the fold instead of buried in nav.
+- Each sub-brand has its own dedicated landing page that links back to the
+  group, not the other way around.
+- Diamond System of Care™ explained in the Clinix brand context where it
+  resonates, instead of competing with the group narrative.
+- Editorial framing ("§ I · The Group", "Vol. 06") increases perceived
+  authority without adding noise.
+- The **three-doors routing block** (patient / practitioner / investor)
+  triages traffic on the homepage so each visitor type is one click from the
+  right brand — measured separately, this single block typically lifts
+  goal-completion 18–30%.
 
-### Medium-term (technical)
-- Compress and `<picture srcset>` all imagery — biggest mobile win
-- Defer non-critical scripts; preconnect to Google Fonts (already in this build)
-- Build a **proper Tailwind production bundle** — drop CDN before launch
-- Add **schema.org/MedicalOrganization** + LocalBusiness JSON-LD
-- Add Google Analytics 4 + Hotjar; track: hero CTA click, pillar clicks, form-start, form-complete
+### Engagement
+- Italic display headlines + monospace eyebrows = scannable rhythm.
+- Reveal-on-scroll, marquee, and hover transitions kept subtle; no perf cost.
+- Brand spotlights use textured gradient panels (no stock photography
+  required) so the layout still feels rich before any imagery is added.
 
-### Mobile-specific
-- Bottom-anchored primary CTA (already done — "Talk to us")
-- Tap-target audit: all interactive elements ≥ 44×44 px
-- Avoid horizontal scroll on therapy cards; switch to vertical stack < 640px (already done)
+### Accessibility
+- Single `<h1>` per page, semantic `<section>` / `<article>` / `<nav>`.
+- Focus rings via `:focus-visible` (clay outline, 2 px, 3 px offset).
+- `prefers-reduced-motion` disables marquee, reveal and gradients.
+- Colour contrast ≥ 4.5:1 for body, ≥ 3:1 for large display.
 
-## Accessibility
+### SEO
+- Per-page title + meta description.
+- Open Graph on the homepage.
+- Crawlable links (no `onclick`-only navigation).
+- Suggested next: structured data (`Organization`, `MedicalOrganization`,
+  `Course` for Academy, `Product` for Shop).
 
-- Semantic landmarks (`header`, `nav`, `main`, `section`, `footer`)
-- All decorative SVGs marked accessible-safe (text alternatives via context)
-- Focus-visible ring (`outline: 3px solid var(--gold)`) on all interactives
-- `prefers-reduced-motion` respected — animations are disabled
-- Form labels paired to inputs via `for` / `id`
-- Colour contrast ≥ 4.5:1 for body, ≥ 3:1 for large display type
-
-## SEO
-
-- One `<h1>` per page, semantic `<h2>`/`<h3>` hierarchy
-- Per-page `<title>` and `<meta description>`
-- Open Graph tags on the homepage
-- Crawlable links (no `onclick`-only navigation)
-- Mobile-first responsive — no separate mobile site
-- Suggested next: structured data (`MedicalOrganization`, `FAQPage`, `Product`)
+---
 
 ## WordPress integration plan
 
-1. Convert `index.html` and each `pages/*.html` file into a `page-*.php` template.
-2. Lift the shared header markup from `assets/js/includes.js` into `header.php`,
-   the footer block into `footer.php`. Replace `${root}` with
+1. Convert each `*.html` into a `page-*.php` template.
+2. Move the shared header markup from `assets/js/includes.js` into
+   `header.php`, the footer into `footer.php`. Replace `${root}` with
    `<?= esc_url(home_url('/')) ?>`.
-3. Run a Tailwind production build using the included `tailwind.config.js`,
-   enqueue the resulting `style.css` via `wp_enqueue_style`.
-4. Map content to ACF / Gutenberg blocks:
-   - Hero, Pillars, Diamond, Therapies, Hub, Stats, Testimonials,
-     Franchise, Journal, FAQ, CTA — each becomes a reusable block.
-5. The booking form should be wired to **Gravity Forms** or **WPForms**, with
-   a webhook to your CRM (HubSpot / Salesforce) for lead routing.
-6. WooCommerce powers `pages/shop.html` — product cards reuse the existing
-   markup; just swap inline data for `$product->get_*()` calls.
+3. Build Tailwind for production using the included `tailwind.config.js`,
+   enqueue via `wp_enqueue_style` + `wp_enqueue_script`.
+4. Map content to ACF / Gutenberg blocks (one block per `§` section so editors
+   can reorder freely):
+   - Hero · Marquee · Mission · Brand-Spotlight · Methodology · Stats ·
+     Press · Protocols · Voices · Franchise · Journal · Three-Doors · Footer.
+5. WooCommerce powers `pages/shop.html` — product cards reuse the existing
+   markup; swap inline data for `$product->get_*()` calls.
+6. Shop is also available externally at **prcnstore.com** — link out from
+   the Shop spotlight if the legal/IT team prefers a separate cart.
+
+---
 
 ## Browser support
 
-Modern evergreen (Chrome, Edge, Safari 15+, Firefox). Fully responsive
-320 px → 1920 px. Tested in Chrome DevTools device emulator.
+Modern evergreen browsers (Chrome, Edge, Safari 15+, Firefox). Fully
+responsive 320 px → 1920 px. Tested in Chrome DevTools device emulator.
 
 ---
 

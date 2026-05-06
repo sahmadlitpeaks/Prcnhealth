@@ -1,6 +1,6 @@
 /**
- * Tailwind config — used when compiling for production / WordPress.
- * Mirrors the inline config inside index.html so designs stay consistent.
+ * Tailwind config — production build for Precision Health GROUP (parent brand).
+ * Mirrors the inline config in index.html and assets/js/tailwind-config.js.
  */
 module.exports = {
   content: [
@@ -14,42 +14,35 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
+        display: ['"DM Serif Display"', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       colors: {
-        brand: {
-          50:  '#F1F8F6',
-          100: '#DCEDE8',
-          200: '#B6D9D0',
-          300: '#84BDB0',
-          400: '#4F9C8B',
-          500: '#2A7E6E',
-          600: '#1B655A',
-          700: '#155049',
-          800: '#0F4C46',
-          900: '#0A322E',
+        forest: {
+          50: '#EEF3F0', 100: '#D7E2DB', 200: '#A8C0AF', 300: '#739783',
+          400: '#456E58', 500: '#234F3D', 600: '#173E2F', 700: '#0E3B33',
+          800: '#092A24', 900: '#051A16',
         },
-        sand:  '#FAF7F2',
-        cream: '#F4EFE6',
-        gold:  '#C9A86A',
-        ink:   '#0E1B1A',
+        clay: {
+          50: '#FAF1EC', 100: '#F2DDD0', 200: '#E5B59E', 300: '#D08A6A',
+          400: '#C26B4A', 500: '#A8542F', 600: '#883F22',
+        },
+        ivory: '#F8F4EC',
+        bone:  '#EEE6D6',
+        ink:   '#0A1410',
       },
       boxShadow: {
-        soft: '0 8px 30px rgba(15, 76, 70, 0.08)',
-        glow: '0 20px 60px -20px rgba(15, 76, 70, 0.45)',
+        paper: '0 1px 0 rgba(10,20,16,.04), 0 30px 60px -30px rgba(10,20,16,.18)',
       },
+      letterSpacing: { tightest: '-0.04em' },
       animation: {
-        float:      'float 6s ease-in-out infinite',
-        'fade-up':  'fadeUp .8s ease forwards',
-        'pulse-ring': 'pulseRing 2.4s cubic-bezier(.4,0,.6,1) infinite',
-        marquee:    'marquee 40s linear infinite',
+        'fade-up': 'fadeUp .9s cubic-bezier(.2,.8,.2,1) forwards',
+        marquee:   'marquee 50s linear infinite',
       },
       keyframes: {
-        float:     { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
-        fadeUp:    { '0%': { opacity: 0, transform: 'translateY(24px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
-        pulseRing: { '0%': { transform: 'scale(.8)', opacity: .7 }, '80%,100%': { transform: 'scale(2)', opacity: 0 } },
-        marquee:   { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
+        fadeUp:  { '0%': { opacity: 0, transform: 'translateY(28px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+        marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
       },
     },
   },

@@ -1,46 +1,75 @@
 /* =============================================================
-   Precision Health — main.css
-   Custom layer on top of Tailwind. Keep small and intentional.
+   Precision Health Group — main.css
+   Editorial / parent-brand layer on top of Tailwind.
    ============================================================= */
 
 :root {
-  --brand-800: #0F4C46;
-  --brand-900: #0A322E;
-  --gold: #C9A86A;
-  --sand: #FAF7F2;
+  --forest-700: #0E3B33;
+  --forest-800: #092A24;
+  --forest-900: #051A16;
+  --clay-400:   #C26B4A;
+  --ivory:      #F8F4EC;
+  --bone:       #EEE6D6;
 }
 
-html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+
+/* Subtle paper texture for the page — gives the editorial feel */
+body {
+  background-image:
+    radial-gradient(1200px 600px at 80% -10%, rgba(194,107,74,.06), transparent 60%),
+    radial-gradient(900px  500px at -10% 110%, rgba(14,59,51,.06), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Display headlines — let DM Serif Display breathe */
+.display-xl { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; line-height: 0.95; letter-spacing: -0.025em; }
+
+/* Marquee */
+.animate-marquee:hover { animation-play-state: paused; }
 
 /* Hide native arrow on <details> */
 details summary::-webkit-details-marker { display: none; }
 
-/* Header shrink-on-scroll */
-.is-scrolled { box-shadow: 0 8px 30px rgba(15, 76, 70, .08); }
-.is-scrolled nav { height: 64px; }
+/* Section eyebrow — small caps mono label used across the site */
+.eyebrow {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--forest-700);
+}
+
+/* Numbered indices — used in editorial grids */
+.index-num {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1;
+  color: var(--clay-400);
+}
 
 /* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
 .reveal.is-visible { opacity: 1; transform: none; }
 
-/* Marquee — pause on hover */
-.animate-marquee:hover { animation-play-state: paused; }
+/* Sticky header subtle border once scrolled */
+.is-scrolled { border-color: rgba(14,59,51,.12) !important; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0ms !important;
     scroll-behavior: auto !important;
   }
+  body { background-image: none; }
 }
 
 /* Focus ring (accessibility) */
 :where(a, button, input, select, textarea, summary):focus-visible {
-  outline: 3px solid var(--gold);
-  outline-offset: 2px;
-  border-radius: 8px;
+  outline: 2px solid var(--clay-400);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Print friendly */

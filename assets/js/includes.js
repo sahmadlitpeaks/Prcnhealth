@@ -1,107 +1,164 @@
-/* Tiny include loader so every page shares the same header/footer
-   without duplicating markup. In WordPress this becomes get_header()/get_footer(). */
+/* Shared header/footer for Precision Health GROUP — parent brand site.
+   In WordPress this becomes get_header()/get_footer(). */
 (() => {
   const root = location.pathname.includes('/pages/') ? '../' : './';
 
   const HEADER = `
-<div class="bg-brand-900 text-brand-50 text-xs sm:text-sm">
-  <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between gap-4">
-    <p class="flex items-center gap-2">
-      <span class="inline-block w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
-      <span class="hidden sm:inline">Now accepting NAS, Neuron, Almadallah & FMC insurance</span>
-      <span class="sm:hidden">Insurance partners onboarded</span>
+<div class="bg-forest-900 text-ivory/90 text-[12px]">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-2.5 flex items-center justify-between gap-4">
+    <p class="flex items-center gap-2 font-mono uppercase tracking-[0.18em]">
+      <span class="inline-block w-1.5 h-1.5 rounded-full bg-clay-400"></span>
+      <span class="hidden sm:inline">Precision Health Group · Dubai · UAE</span>
+      <span class="sm:hidden">PRCN · UAE</span>
     </p>
-    <a href="${root}index.html#contact" class="hidden md:inline-flex items-center gap-1 hover:text-gold">Book a free 15-min consult →</a>
+    <div class="flex items-center gap-4">
+      <a href="${root}pages/academy.html" class="hidden md:inline hover:text-clay-200 transition">Academy enrolling</a>
+      <a href="${root}index.html#contact" class="inline-flex items-center gap-1 hover:text-clay-200 transition">Talk to us →</a>
+    </div>
   </div>
 </div>
-<header id="site-header" class="sticky top-0 z-50 bg-sand/80 backdrop-blur-md border-b border-brand-100/60">
-  <nav class="max-w-7xl mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
-    <a href="${root}index.html" class="flex items-center gap-2.5 group">
-      <span class="relative inline-flex w-10 h-10 rounded-xl bg-brand-800 text-sand items-center justify-center font-display font-semibold text-lg shadow-soft">
-        P<span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-gold ring-2 ring-sand"></span>
+<header id="site-header" class="sticky top-0 z-50 bg-ivory/85 backdrop-blur-md border-b border-transparent transition-all">
+  <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between">
+    <a href="${root}index.html" class="flex items-center gap-3 group" aria-label="Precision Health Group">
+      <span class="relative inline-flex w-9 h-9 items-center justify-center rounded-md bg-forest-700 text-ivory font-display text-lg leading-none">
+        P
+        <span class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-clay-400"></span>
       </span>
-      <div class="leading-tight">
-        <div class="font-display text-lg text-brand-900">Precision Health</div>
-        <div class="text-[10px] tracking-[0.2em] uppercase text-brand-600">Group</div>
-      </div>
+      <span class="leading-tight">
+        <span class="block font-display text-[19px] text-forest-800 tracking-tightest">Precision Health</span>
+        <span class="block font-mono text-[9px] uppercase tracking-[0.25em] text-forest-700/70 mt-0.5">Group · est. 2018</span>
+      </span>
     </a>
-    <ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-brand-900">
-      <li><a href="${root}pages/services.html" class="hover:text-brand-600">Telehealth</a></li>
-      <li><a href="${root}pages/therapies.html" class="hover:text-brand-600">Therapies</a></li>
-      <li><a href="${root}pages/clinics.html" class="hover:text-brand-600">Clinics</a></li>
-      <li><a href="${root}pages/shop.html" class="hover:text-brand-600">Shop</a></li>
-      <li><a href="${root}pages/about.html" class="hover:text-brand-600">About</a></li>
-      <li><a href="${root}pages/franchise.html" class="hover:text-brand-600">Franchise</a></li>
+
+    <ul class="hidden lg:flex items-center gap-7 text-[14px] font-medium text-forest-800">
+      <li><a href="${root}pages/about.html" class="hover:text-clay-400 transition">About</a></li>
+      <li><a href="${root}pages/team.html" class="hover:text-clay-400 transition">Team</a></li>
+      <li class="relative group">
+        <button class="flex items-center gap-1 hover:text-clay-400 transition py-2">
+          Brands
+          <svg class="w-3 h-3 transition group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[560px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+          <div class="bg-ivory rounded-md shadow-paper border border-forest-100 p-2 grid grid-cols-2">
+            <a href="${root}pages/clinics.html" class="p-4 rounded-md hover:bg-bone transition">
+              <span class="font-mono text-[10px] uppercase tracking-widest text-clay-400">01 · Clinix</span>
+              <span class="block font-display text-lg text-forest-800 mt-1">Precision Health Clinix</span>
+              <span class="block text-xs text-forest-700/70 mt-1">Integrative medicine clinics & therapies.</span>
+            </a>
+            <a href="${root}pages/zones.html" class="p-4 rounded-md hover:bg-bone transition">
+              <span class="font-mono text-[10px] uppercase tracking-widest text-clay-400">02 · Wellness</span>
+              <span class="block font-display text-lg text-forest-800 mt-1">Precision Wellness</span>
+              <span class="block text-xs text-forest-700/70 mt-1">Three-zone wellness centres.</span>
+            </a>
+            <a href="${root}pages/shop.html" class="p-4 rounded-md hover:bg-bone transition">
+              <span class="font-mono text-[10px] uppercase tracking-widest text-clay-400">03 · Shop</span>
+              <span class="block font-display text-lg text-forest-800 mt-1">Precision Shop</span>
+              <span class="block text-xs text-forest-700/70 mt-1">Tests, supplements & wellness tech.</span>
+            </a>
+            <a href="${root}pages/academy.html" class="p-4 rounded-md hover:bg-bone transition">
+              <span class="font-mono text-[10px] uppercase tracking-widest text-clay-400">04 · Academy</span>
+              <span class="block font-display text-lg text-forest-800 mt-1">Precision Health Education</span>
+              <span class="block text-xs text-forest-700/70 mt-1">Specialty training & certification.</span>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li><a href="${root}pages/therapies.html" class="hover:text-clay-400 transition">Therapies</a></li>
+      <li><a href="${root}pages/protocols.html" class="hover:text-clay-400 transition">Protocols</a></li>
+      <li><a href="${root}pages/franchise.html" class="hover:text-clay-400 transition">Franchise</a></li>
     </ul>
+
     <div class="flex items-center gap-2">
-      <a href="${root}pages/shop.html" aria-label="Shop" class="hidden md:inline-flex w-10 h-10 items-center justify-center rounded-full text-brand-800 hover:bg-brand-50">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2l1.5 4.5h9L18 2M3 7h18l-2 13H5L3 7z"/></svg>
+      <a href="${root}index.html#contact" class="hidden sm:inline-flex items-center gap-2 border border-forest-700 text-forest-700 hover:bg-forest-700 hover:text-ivory text-[13px] font-semibold px-4 py-2.5 rounded-full transition">
+        Talk to us
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
-      <a href="${root}index.html#contact" class="hidden sm:inline-flex items-center gap-2 bg-brand-800 hover:bg-brand-900 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-soft">
-        Book Consult →
-      </a>
-      <button id="menu-toggle" aria-label="Open menu" class="lg:hidden w-10 h-10 rounded-full hover:bg-brand-50 flex items-center justify-center text-brand-900">
+      <button id="menu-toggle" aria-label="Open menu" class="lg:hidden w-10 h-10 rounded-full hover:bg-bone flex items-center justify-center text-forest-800">
         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </nav>
-  <div id="mobile-menu" class="lg:hidden hidden border-t border-brand-100 bg-sand">
-    <div class="max-w-7xl mx-auto px-4 py-4 space-y-1 text-brand-900">
-      <a href="${root}pages/services.html" class="block px-3 py-3 rounded-lg hover:bg-cream">Telehealth</a>
-      <a href="${root}pages/therapies.html" class="block px-3 py-3 rounded-lg hover:bg-cream">Therapies</a>
-      <a href="${root}pages/clinics.html" class="block px-3 py-3 rounded-lg hover:bg-cream">Clinics</a>
-      <a href="${root}pages/shop.html" class="block px-3 py-3 rounded-lg hover:bg-cream">Shop</a>
-      <a href="${root}pages/about.html" class="block px-3 py-3 rounded-lg hover:bg-cream">About</a>
-      <a href="${root}pages/franchise.html" class="block px-3 py-3 rounded-lg hover:bg-cream">Franchise</a>
-      <a href="${root}index.html#contact" class="block mt-2 text-center bg-brand-800 text-white font-semibold py-3 rounded-full">Book Consult</a>
+
+  <div id="mobile-menu" class="lg:hidden hidden border-t border-forest-100 bg-ivory">
+    <div class="max-w-7xl mx-auto px-5 py-4 space-y-1 text-forest-800">
+      <p class="px-3 pt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-clay-400">Brands</p>
+      <a href="${root}pages/clinics.html" class="block px-3 py-2.5 rounded-md hover:bg-bone">Precision Health Clinix</a>
+      <a href="${root}pages/zones.html" class="block px-3 py-2.5 rounded-md hover:bg-bone">Precision Wellness</a>
+      <a href="${root}pages/shop.html" class="block px-3 py-2.5 rounded-md hover:bg-bone">Precision Shop</a>
+      <a href="${root}pages/academy.html" class="block px-3 py-2.5 rounded-md hover:bg-bone">Precision Academy</a>
+      <p class="px-3 pt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-clay-400">Group</p>
+      <a href="${root}pages/about.html" class="block px-3 py-2.5 rounded-md hover:bg-bone">About</a>
+      <a href="${root}pages/team.html" class="block px-3 py-2.5 rounded-md hover:bg-bone">Team</a>
+      <a href="${root}pages/therapies.html" class="block px-3 py-2.5 rounded-md hover:bg-bone">Therapies</a>
+      <a href="${root}pages/protocols.html" class="block px-3 py-2.5 rounded-md hover:bg-bone">Protocols</a>
+      <a href="${root}pages/franchise.html" class="block px-3 py-2.5 rounded-md hover:bg-bone">Franchise</a>
+      <a href="${root}index.html#contact" class="block mt-3 text-center bg-forest-700 text-ivory font-semibold py-3 rounded-full">Talk to us</a>
     </div>
   </div>
 </header>`;
 
   const FOOTER = `
-<footer class="bg-ink text-sand/80 mt-20">
-  <div class="max-w-7xl mx-auto px-4 lg:px-8 py-16 grid md:grid-cols-2 lg:grid-cols-5 gap-10">
-    <div class="lg:col-span-2">
-      <div class="flex items-center gap-2.5">
-        <span class="w-10 h-10 rounded-xl bg-brand-700 text-sand flex items-center justify-center font-display text-lg">P</span>
-        <div>
-          <div class="font-display text-lg text-sand">Precision Health</div>
-          <div class="text-[10px] tracking-[0.2em] uppercase text-sand/60">Group</div>
+<footer class="bg-forest-800 text-ivory/80 mt-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-20 pb-10">
+    <div class="grid lg:grid-cols-12 gap-10 pb-14 border-b border-ivory/10">
+      <div class="lg:col-span-5">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-md bg-ivory text-forest-800 flex items-center justify-center font-display text-lg">P</span>
+          <div>
+            <div class="font-display text-xl text-ivory">Precision Health Group</div>
+            <div class="font-mono text-[9px] uppercase tracking-[0.25em] text-ivory/50 mt-0.5">A house of four brands</div>
+          </div>
         </div>
+        <p class="mt-6 max-w-md font-display text-2xl text-ivory/90 leading-tight">
+          Merging precise science and personalised care to deliver true health and wellness.
+        </p>
+        <form class="mt-8 flex gap-2 max-w-md">
+          <input type="email" required placeholder="Email for our quarterly briefing" class="flex-1 px-4 py-3 rounded-md bg-ivory/10 border border-ivory/15 text-ivory placeholder:text-ivory/40 outline-none focus:border-clay-400 transition text-sm" />
+          <button class="bg-clay-400 hover:bg-clay-500 text-ivory font-semibold px-5 rounded-md transition text-sm">Subscribe</button>
+        </form>
       </div>
-      <p class="mt-5 max-w-sm text-sm leading-relaxed">An integrated group of healthcare and wellness entities — moving you from suboptimal to truly well.</p>
+
+      <div class="lg:col-span-2">
+        <h4 class="font-mono text-[10px] uppercase tracking-[0.2em] text-clay-200 mb-4">Brands</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="${root}pages/clinics.html" class="hover:text-ivory transition">Precision Clinix</a></li>
+          <li><a href="${root}pages/zones.html" class="hover:text-ivory transition">Precision Wellness</a></li>
+          <li><a href="${root}pages/shop.html" class="hover:text-ivory transition">Precision Shop</a></li>
+          <li><a href="${root}pages/academy.html" class="hover:text-ivory transition">Precision Academy</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <h4 class="font-mono text-[10px] uppercase tracking-[0.2em] text-clay-200 mb-4">Discover</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="${root}pages/therapies.html" class="hover:text-ivory transition">Therapies</a></li>
+          <li><a href="${root}pages/protocols.html" class="hover:text-ivory transition">Protocols</a></li>
+          <li><a href="#" class="hover:text-ivory transition">Wellness Centre Locations</a></li>
+          <li><a href="#" class="hover:text-ivory transition">Events</a></li>
+          <li><a href="#" class="hover:text-ivory transition">Certifications</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <h4 class="font-mono text-[10px] uppercase tracking-[0.2em] text-clay-200 mb-4">Group</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="${root}pages/about.html" class="hover:text-ivory transition">About</a></li>
+          <li><a href="${root}pages/team.html" class="hover:text-ivory transition">Team</a></li>
+          <li><a href="${root}pages/franchise.html" class="hover:text-ivory transition">Franchise opportunities</a></li>
+          <li><a href="#" class="hover:text-ivory transition">Press & media</a></li>
+          <li><a href="#" class="hover:text-ivory transition">Careers</a></li>
+        </ul>
+      </div>
     </div>
-    <div><h4 class="text-sand font-semibold mb-4 text-sm">Care</h4><ul class="space-y-2.5 text-sm">
-      <li><a href="${root}pages/services.html" class="hover:text-sand">Telehealth</a></li>
-      <li><a href="${root}pages/therapies.html" class="hover:text-sand">Therapies</a></li>
-      <li><a href="${root}pages/clinics.html" class="hover:text-sand">Clinics</a></li>
-      <li><a href="${root}pages/shop.html" class="hover:text-sand">Shop</a></li>
-    </ul></div>
-    <div><h4 class="text-sand font-semibold mb-4 text-sm">Company</h4><ul class="space-y-2.5 text-sm">
-      <li><a href="${root}pages/about.html" class="hover:text-sand">About</a></li>
-      <li><a href="${root}pages/franchise.html" class="hover:text-sand">Franchise</a></li>
-      <li><a href="#" class="hover:text-sand">Certifications</a></li>
-      <li><a href="#" class="hover:text-sand">Careers</a></li>
-    </ul></div>
-    <div>
-      <h4 class="text-sand font-semibold mb-4 text-sm">Stay informed</h4>
-      <p class="text-sm">Monthly briefings written by our clinicians.</p>
-      <form class="mt-4 flex gap-2">
-        <input type="email" required placeholder="Email address" class="flex-1 px-4 py-2.5 rounded-full bg-white/5 border border-white/10 text-sand placeholder:text-sand/40 outline-none focus:border-gold text-sm" />
-        <button class="bg-gold text-brand-900 font-semibold px-5 rounded-full hover:bg-gold/90 text-sm">Join</button>
-      </form>
+
+    <div class="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-ivory/55">
+      <p class="font-mono uppercase tracking-[0.15em]">© <span id="year"></span> · Precision Health Group · All rights reserved</p>
+      <ul class="flex gap-6">
+        <li><a href="#" class="hover:text-ivory">Privacy</a></li>
+        <li><a href="#" class="hover:text-ivory">Terms</a></li>
+        <li><a href="#" class="hover:text-ivory">Cookies</a></li>
+      </ul>
     </div>
   </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-sand/60">
-      <p>© <span id="year"></span> Precision Health Group. All rights reserved.</p>
-      <ul class="flex gap-6"><li><a href="#" class="hover:text-sand">Privacy</a></li><li><a href="#" class="hover:text-sand">Terms</a></li></ul>
-    </div>
-  </div>
-</footer>
-<a href="${root}index.html#contact" class="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 bg-brand-800 hover:bg-brand-900 text-white font-semibold px-5 py-3 rounded-full shadow-glow">
-  <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span> Talk to us →
-</a>`;
+</footer>`;
 
   document.querySelectorAll('[data-include="header"]').forEach(el => el.outerHTML = HEADER);
   document.querySelectorAll('[data-include="footer"]').forEach(el => el.outerHTML = FOOTER);
