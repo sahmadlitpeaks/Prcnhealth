@@ -1,0 +1,50 @@
+/* =============================================================
+   Precision Health — main.css
+   Custom layer on top of Tailwind. Keep small and intentional.
+   ============================================================= */
+
+:root {
+  --brand-800: #0F4C46;
+  --brand-900: #0A322E;
+  --gold: #C9A86A;
+  --sand: #FAF7F2;
+}
+
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Hide native arrow on <details> */
+details summary::-webkit-details-marker { display: none; }
+
+/* Header shrink-on-scroll */
+.is-scrolled { box-shadow: 0 8px 30px rgba(15, 76, 70, .08); }
+.is-scrolled nav { height: 64px; }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Marquee — pause on hover */
+.animate-marquee:hover { animation-play-state: paused; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus ring (accessibility) */
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Print friendly */
+@media print {
+  header, footer, .fixed { display: none !important; }
+  body { background: #fff; color: #000; }
+}

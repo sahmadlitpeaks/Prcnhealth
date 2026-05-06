@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRCN Shop — Practitioner-grade wellness</title>
+  <meta name="description" content="Vitamins, supplements, devices and protocols — only the ones our clinicians actually prescribe." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+</head>
+<body class="bg-sand text-ink font-sans antialiased">
+
+<div data-include="header"></div>
+
+<main>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-cream to-sand"></div>
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-xs uppercase tracking-[0.25em] text-brand-600 font-medium">PRCN Shop</span>
+        <h1 class="font-display text-5xl lg:text-7xl text-brand-900 mt-3 leading-[1.05]">Only what our doctors <span class="italic text-brand-600">actually prescribe.</span></h1>
+        <p class="mt-6 text-lg text-brand-900/70 max-w-xl">Practitioner-grade vitamins, supplements and devices — curated by our clinicians, never paid-to-place.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#shop" class="bg-brand-800 hover:bg-brand-900 text-white font-semibold px-7 py-4 rounded-full shadow-soft transition">Shop bestsellers →</a>
+          <a href="../index.html#contact" class="bg-white border border-brand-200 hover:border-brand-400 text-brand-900 font-semibold px-7 py-4 rounded-full transition">Get a personal protocol</a>
+        </div>
+      </div>
+      <div class="relative aspect-square rounded-[2rem] bg-gradient-to-br from-cream to-gold/30 shadow-glow overflow-hidden">
+        <div class="absolute inset-0 grid grid-cols-2 gap-4 p-8">
+          <div class="rounded-2xl bg-white shadow-soft flex items-end p-4"><span class="font-display text-brand-900">Magnesium Glycinate</span></div>
+          <div class="rounded-2xl bg-brand-800 text-sand shadow-soft flex items-end p-4"><span class="font-display">Omega-3 EPA/DHA</span></div>
+          <div class="rounded-2xl bg-brand-200 shadow-soft flex items-end p-4"><span class="font-display text-brand-900">Vitamin D3+K2</span></div>
+          <div class="rounded-2xl bg-gold/80 shadow-soft flex items-end p-4"><span class="font-display text-brand-900">Methylated B-Complex</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="border-y border-brand-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-5 flex flex-wrap gap-2 text-sm">
+      <button class="px-4 py-2 rounded-full bg-brand-800 text-white font-medium">All</button>
+      <button class="px-4 py-2 rounded-full bg-brand-50 text-brand-800 hover:bg-brand-100 font-medium">Foundations</button>
+      <button class="px-4 py-2 rounded-full bg-brand-50 text-brand-800 hover:bg-brand-100 font-medium">Energy</button>
+      <button class="px-4 py-2 rounded-full bg-brand-50 text-brand-800 hover:bg-brand-100 font-medium">Sleep & stress</button>
+      <button class="px-4 py-2 rounded-full bg-brand-50 text-brand-800 hover:bg-brand-100 font-medium">Gut</button>
+      <button class="px-4 py-2 rounded-full bg-brand-50 text-brand-800 hover:bg-brand-100 font-medium">Hormones</button>
+      <button class="px-4 py-2 rounded-full bg-brand-50 text-brand-800 hover:bg-brand-100 font-medium">Devices</button>
+    </div>
+  </section>
+
+  <!-- Product grid -->
+  <section id="shop" class="py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- product card template -->
+      <article class="group bg-white rounded-3xl border border-brand-100 hover:border-brand-300 hover:-translate-y-1 transition shadow-soft hover:shadow-glow overflow-hidden">
+        <div class="aspect-square bg-gradient-to-br from-brand-100 to-brand-300 relative">
+          <span class="absolute top-3 left-3 text-[10px] uppercase tracking-widest bg-white/80 backdrop-blur px-2.5 py-1 rounded-full text-brand-800">Bestseller</span>
+        </div>
+        <div class="p-5">
+          <p class="text-xs text-brand-700/70">Sleep & stress</p>
+          <h3 class="font-display text-lg text-brand-900 mt-1">Magnesium Glycinate 400</h3>
+          <div class="flex items-center justify-between mt-4">
+            <span class="font-semibold text-brand-900">AED 145</span>
+            <button class="bg-brand-800 hover:bg-brand-900 text-white text-xs font-semibold px-3 py-2 rounded-full">Add</button>
+          </div>
+        </div>
+      </article>
+      <article class="group bg-white rounded-3xl border border-brand-100 hover:border-brand-300 hover:-translate-y-1 transition shadow-soft hover:shadow-glow overflow-hidden">
+        <div class="aspect-square bg-gradient-to-br from-gold/40 to-brand-100 relative"><span class="absolute top-3 left-3 text-[10px] uppercase tracking-widest bg-white/80 backdrop-blur px-2.5 py-1 rounded-full text-brand-800">New</span></div>
+        <div class="p-5">
+          <p class="text-xs text-brand-700/70">Foundations</p>
+          <h3 class="font-display text-lg text-brand-900 mt-1">Vitamin D3 + K2</h3>
+          <div class="flex items-center justify-between mt-4"><span class="font-semibold text-brand-900">AED 175</span><button class="bg-brand-800 text-white text-xs font-semibold px-3 py-2 rounded-full">Add</button></div>
+        </div>
+      </article>
+      <article class="group bg-white rounded-3xl border border-brand-100 hover:border-brand-300 hover:-translate-y-1 transition shadow-soft hover:shadow-glow overflow-hidden">
+        <div class="aspect-square bg-gradient-to-br from-brand-200 to-brand-500 relative"></div>
+        <div class="p-5">
+          <p class="text-xs text-brand-700/70">Foundations</p>
+          <h3 class="font-display text-lg text-brand-900 mt-1">Omega-3 EPA/DHA 1000</h3>
+          <div class="flex items-center justify-between mt-4"><span class="font-semibold text-brand-900">AED 220</span><button class="bg-brand-800 text-white text-xs font-semibold px-3 py-2 rounded-full">Add</button></div>
+        </div>
+      </article>
+      <article class="group bg-white rounded-3xl border border-brand-100 hover:border-brand-300 hover:-translate-y-1 transition shadow-soft hover:shadow-glow overflow-hidden">
+        <div class="aspect-square bg-gradient-to-br from-brand-50 to-gold/40 relative"><span class="absolute top-3 left-3 text-[10px] uppercase tracking-widest bg-white/80 backdrop-blur px-2.5 py-1 rounded-full text-brand-800">Doctor pick</span></div>
+        <div class="p-5">
+          <p class="text-xs text-brand-700/70">Energy</p>
+          <h3 class="font-display text-lg text-brand-900 mt-1">Methylated B-Complex</h3>
+          <div class="flex items-center justify-between mt-4"><span class="font-semibold text-brand-900">AED 195</span><button class="bg-brand-800 text-white text-xs font-semibold px-3 py-2 rounded-full">Add</button></div>
+        </div>
+      </article>
+      <article class="group bg-white rounded-3xl border border-brand-100 hover:border-brand-300 hover:-translate-y-1 transition shadow-soft hover:shadow-glow overflow-hidden">
+        <div class="aspect-square bg-gradient-to-br from-brand-300 to-brand-700 relative"></div>
+        <div class="p-5">
+          <p class="text-xs text-brand-700/70">Gut</p>
+          <h3 class="font-display text-lg text-brand-900 mt-1">Multi-strain Probiotic 50B</h3>
+          <div class="flex items-center justify-between mt-4"><span class="font-semibold text-brand-900">AED 240</span><button class="bg-brand-800 text-white text-xs font-semibold px-3 py-2 rounded-full">Add</button></div>
+        </div>
+      </article>
+      <article class="group bg-white rounded-3xl border border-brand-100 hover:border-brand-300 hover:-translate-y-1 transition shadow-soft hover:shadow-glow overflow-hidden">
+        <div class="aspect-square bg-gradient-to-br from-cream to-brand-200 relative"></div>
+        <div class="p-5">
+          <p class="text-xs text-brand-700/70">Hormones</p>
+          <h3 class="font-display text-lg text-brand-900 mt-1">Adaptogen Stack</h3>
+          <div class="flex items-center justify-between mt-4"><span class="font-semibold text-brand-900">AED 260</span><button class="bg-brand-800 text-white text-xs font-semibold px-3 py-2 rounded-full">Add</button></div>
+        </div>
+      </article>
+      <article class="group bg-white rounded-3xl border border-brand-100 hover:border-brand-300 hover:-translate-y-1 transition shadow-soft hover:shadow-glow overflow-hidden">
+        <div class="aspect-square bg-gradient-to-br from-brand-700 to-brand-900 relative"></div>
+        <div class="p-5">
+          <p class="text-xs text-brand-700/70">Devices</p>
+          <h3 class="font-display text-lg text-brand-900 mt-1">Hydrogen Inhaler · Home</h3>
+          <div class="flex items-center justify-between mt-4"><span class="font-semibold text-brand-900">AED 4,800</span><button class="bg-brand-800 text-white text-xs font-semibold px-3 py-2 rounded-full">Add</button></div>
+        </div>
+      </article>
+      <article class="group bg-white rounded-3xl border border-brand-100 hover:border-brand-300 hover:-translate-y-1 transition shadow-soft hover:shadow-glow overflow-hidden">
+        <div class="aspect-square bg-gradient-to-br from-brand-100 to-gold/30 relative"></div>
+        <div class="p-5">
+          <p class="text-xs text-brand-700/70">Diagnostics</p>
+          <h3 class="font-display text-lg text-brand-900 mt-1">Gut Chex™ Test Kit</h3>
+          <div class="flex items-center justify-between mt-4"><span class="font-semibold text-brand-900">AED 1,800</span><button class="bg-brand-800 text-white text-xs font-semibold px-3 py-2 rounded-full">Add</button></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Trust strip -->
+  <section class="py-12 bg-cream border-y border-brand-100">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm">
+      <div><div class="text-2xl">🚚</div><p class="mt-2 text-brand-900 font-semibold">Free UAE delivery</p><p class="text-xs text-brand-700">on orders above AED 200</p></div>
+      <div><div class="text-2xl">🔁</div><p class="mt-2 text-brand-900 font-semibold">Subscribe & save 15%</p><p class="text-xs text-brand-700">cancel anytime</p></div>
+      <div><div class="text-2xl">🩺</div><p class="mt-2 text-brand-900 font-semibold">Practitioner-grade only</p><p class="text-xs text-brand-700">no proprietary blends</p></div>
+      <div><div class="text-2xl">↩️</div><p class="mt-2 text-brand-900 font-semibold">30-day satisfaction</p><p class="text-xs text-brand-700">no questions asked</p></div>
+    </div>
+  </section>
+</main>
+
+<div data-include="footer"></div>
+<script src="../assets/js/includes.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
